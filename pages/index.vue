@@ -11,7 +11,7 @@
       </p>
     </section>
     <aside>
-      <div class="explore">explore</div>
+      <NuxtLink to="/destination" class="explore">explore</NuxtLink>
     </aside>
   </div>
 </template>
@@ -82,6 +82,7 @@ section p {
   text-transform: uppercase;
   font-family: "bellefair";
   cursor: pointer;
+  text-decoration: none;
 }
 
 .explore::before {

@@ -10,7 +10,12 @@
       </div>
       <v-spacer class="divider"> </v-spacer>
       <div class="menu-items">
-        <NuxtLink v-for="item in menu" :key="item.name" :to="item.to" class="menu-item">
+        <NuxtLink
+          v-for="item in menu"
+          :key="item.name"
+          :to="item.to"
+          class="menu-item"
+        >
           <b>{{ item.number }}</b>
           <span>{{ item.name }}</span>
           <div v-if="getSelected(item.to)" class="selected"></div>
@@ -22,37 +27,17 @@
 <script>
 export default {
   name: "NavDesktop",
-  data() {
-    return {
-      menu: [
-        {
-          number: "00",
-          to: "/",
-          name: "home",
-        },
-        {
-          number: "01",
-          to: "/destination",
-          name: "destination",
-        },
-        {
-          number: "02",
-          to: "/crew",
-          name: "crew",
-        },
-        {
-          number: "03",
-          to: "/technology",
-          name: "technology",
-        },
-      ],
-    };
+  props: {
+    menu: {
+      type: Array,
+      default: null,
+    },
   },
   methods: {
     getSelected(to) {
-      return to === this.$nuxt.$route.path
-    }
-  }
+      return to === this.$nuxt.$route.path;
+    },
+  },
 };
 </script>
 

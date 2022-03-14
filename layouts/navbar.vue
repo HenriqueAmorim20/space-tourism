@@ -1,7 +1,7 @@
 <template>
   <div>
-    <NavDesktop v-if="width > 700" />
-    <NavMobile v-if="width <= 700"/>
+    <NavDesktop v-if="width > 700" :menu="menu" />
+    <NavMobile v-if="width <= 700" :menu="menu" />
   </div>
 </template>
 <script>
@@ -16,16 +16,38 @@ export default {
   data() {
     return {
       width: null,
-    }
+      menu: [
+        {
+          number: "00",
+          to: "/",
+          name: "home",
+        },
+        {
+          number: "01",
+          to: "/destination",
+          name: "destination",
+        },
+        {
+          number: "02",
+          to: "/crew",
+          name: "crew",
+        },
+        {
+          number: "03",
+          to: "/technology",
+          name: "technology",
+        },
+      ],
+    };
   },
   mounted() {
     this.width = window.innerWidth;
-    this.$nextTick(()=>{
-      window.addEventListener("resize", this.onResize)
-    })
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
   },
   beforeDestroy() {
-    window.removeEventListener("resize", this.onResize)
+    window.removeEventListener("resize", this.onResize);
   },
   methods: {
     onResize() {
