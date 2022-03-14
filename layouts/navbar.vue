@@ -1,7 +1,7 @@
 <template>
   <div>
-    <NavDesktop />
-    <NavMobile />
+    <NavDesktop v-if="width > 750" />
+    <NavMobile v-if="width <= 750"/>
   </div>
 </template>
 <script>
@@ -12,6 +12,25 @@ export default {
   components: {
     NavDesktop,
     NavMobile,
+  },
+  data() {
+    return {
+      width: null,
+    }
+  },
+  mounted() {
+    this.width = window.innerWidth;
+    this.$nextTick(()=>{
+      window.addEventListener("resize", this.onResize)
+    })
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize)
+  },
+  methods: {
+    onResize() {
+      this.width = window.innerWidth;
+    },
   },
 };
 </script>
