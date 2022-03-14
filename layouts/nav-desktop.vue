@@ -13,12 +13,12 @@
         <NuxtLink
           v-for="item in menu"
           :key="item.name"
-          :to="item.to"
+          :to="item.name"
           class="menu-item"
         >
           <b>{{ item.number }}</b>
           <span>{{ item.name }}</span>
-          <div v-if="getSelected(item.to)" class="selected"></div>
+          <div v-if="getSelected(item.name)" class="selected"></div>
         </NuxtLink>
       </div>
     </v-app-bar>
@@ -34,8 +34,8 @@ export default {
     },
   },
   methods: {
-    getSelected(to) {
-      return to === this.$nuxt.$route.path;
+    getSelected(name) {
+      return this.$nuxt.$route.path.includes(name);
     },
   },
 };

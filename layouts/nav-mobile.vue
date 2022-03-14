@@ -26,7 +26,7 @@
         <NuxtLink
           v-for="item in menu"
           :key="item.name"
-          :to="item.to"
+          :to="item.name"
           class="menu-item"
         >
           <b>{{ item.number }}</b>
