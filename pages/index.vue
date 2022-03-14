@@ -30,8 +30,8 @@ export default {
   background-image: url("@/static/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  padding: 8% 10%;
+  min-height: 100vh;
+  padding: 6% 8%;
 }
 
 section,
@@ -105,6 +105,7 @@ section p {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 15%;
   }
   section {
     align-items: center;
