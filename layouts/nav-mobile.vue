@@ -30,7 +30,7 @@
           class="menu-item"
         >
           <b>{{ item.number }}</b>
-          <span>{{ item.name }}</span>
+          <span>{{ item.name.replace("/", "") }}</span>
         </NuxtLink>
       </div>
     </v-navigation-drawer>

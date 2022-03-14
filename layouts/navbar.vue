@@ -19,19 +19,19 @@ export default {
       menu: [
         {
           number: "00",
-          name: "home",
+          name: "/home",
         },
         {
           number: "01",
-          name: "destination",
+          name: "/destination",
         },
         {
           number: "02",
-          name: "crew",
+          name: "/crew",
         },
         {
           number: "03",
-          name: "technology",
+          name: "/technology",
         },
       ],
     };

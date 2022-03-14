@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar class="navbar" height="70" absolute color="transparent" flat>
+    <v-app-bar class="navbar" height="80" absolute color="transparent" flat>
       <div class="logo-img">
         <v-img
           :src="require('@/static/shared/logo.svg')"
@@ -17,7 +17,7 @@
           class="menu-item"
         >
           <b>{{ item.number }}</b>
-          <span>{{ item.name }}</span>
+          <span>{{ item.name.replace("/", "") }}</span>
           <div v-if="getSelected(item.name)" class="selected"></div>
         </NuxtLink>
       </div>
