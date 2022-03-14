@@ -1,5 +1,5 @@
 <template>
-  <div>Mobile</div>
+  <v-app-bar height="60" absolute color="transparent" flat>Mobile</v-app-bar>
 </template>
 <script>
 export default {

@@ -32,7 +32,6 @@ export default {
 
 * {
   font-family: "Bellefair";
-  background-color: var(--dark);
   color: var(--white);
 }
 </style>
