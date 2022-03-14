@@ -1,7 +1,7 @@
 <template>
   <div>
-    <NavDesktop v-if="width > 750" />
-    <NavMobile v-if="width <= 750"/>
+    <NavDesktop v-if="width > 700" />
+    <NavMobile v-if="width <= 700"/>
   </div>
 </template>
 <script>
