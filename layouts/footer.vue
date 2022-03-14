@@ -68,9 +68,12 @@ export default {
 footer {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem 2rem;
+  padding: 0.2rem 2rem 0.5rem;
   font-weight: 400;
   flex-wrap: wrap;
+  background-color: var(--dark);
+  color: var(--white) !important;
+  font-family: "bellefair";
 }
 
 footer div {
@@ -82,6 +85,7 @@ footer div {
 footer a {
   margin-left: 0.5rem;
   text-decoration: none;
+  color: var(--white) !important;
 }
 
 footer span {
@@ -89,12 +93,12 @@ footer span {
 }
 
 .footer-media-icon {
-  width: 1.5rem;
+  width: 1.2rem;
   text-decoration: none;
   transition: transform 0.5s ease;
 }
 
 .footer-media-icon:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -3px);
 }
 </style>
