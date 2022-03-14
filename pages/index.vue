@@ -61,10 +61,11 @@ section h2 {
 }
 
 section p {
-  font-family: "bellefair";
   text-transform: initial;
   color: var(--light);
-  font-size: clamp(0.9rem, 5vw, 1.2rem);
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-weight: 300;
+  line-height: 180%;
 }
 
 .explore {
@@ -123,6 +124,7 @@ section p {
 @media (max-width: 500px) {
   .main {
     background-image: url("@/static/home/background-home-mobile.jpg");
+    padding: 10% 5%;
   }
   section,
   aside {
