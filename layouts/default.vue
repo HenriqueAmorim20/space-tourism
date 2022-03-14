@@ -22,16 +22,19 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@font-face {
+  font-family: "bellefair";
+  src: url("~/assets/Bellefair-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "barlow";
+  src: url("~/assets/BarlowCondensed-Regular.ttf") format("truetype");
+}
 
 :root {
   --dark: hsl(230, 35%, 7%);
   --light: hsl(231, 77%, 90%);
-  --white: hsl(231, 77%, 90%);
-}
-
-* {
-  font-family: "Bellefair";
-  color: var(--white);
+  --white: hsl(0, 0%, 100%);
 }
 </style>
