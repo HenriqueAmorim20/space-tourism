@@ -62,8 +62,8 @@ export default {
   flex-direction: column;
   padding: 2rem 2rem 2rem 3rem;
   z-index: 11;
-  background-color: rgba(255, 255, 255, 0.096);
-  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.096) !important;
+  backdrop-filter: blur(30px) !important;
   width: 425px !important;
 }
 
