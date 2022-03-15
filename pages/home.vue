@@ -30,6 +30,7 @@ export default {
   background-image: url("@/static/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   padding: 6% 8%;
 }

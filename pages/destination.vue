@@ -15,10 +15,18 @@
       </section>
       <aside class="item-content">
         <div class="page-menu">
-          <span :class="index === 0 ? 'selected' : ''" @click="index = 0">moon</span>
-          <span :class="index === 1 ? 'selected' : ''" @click="index = 1">mars</span>
-          <span :class="index === 2 ? 'selected' : ''" @click="index = 2">europa</span>
-          <span :class="index === 3 ? 'selected' : ''" @click="index = 3">titan</span>
+          <span :class="index === 0 ? 'selected' : ''" @click="index = 0"
+            >moon</span
+          >
+          <span :class="index === 1 ? 'selected' : ''" @click="index = 1"
+            >mars</span
+          >
+          <span :class="index === 2 ? 'selected' : ''" @click="index = 2"
+            >europa</span
+          >
+          <span :class="index === 3 ? 'selected' : ''" @click="index = 3"
+            >titan</span
+          >
         </div>
         <h1 class="item-name">{{ destinations[index].name }}</h1>
         <p class="item-description">{{ destinations[index].description }}</p>
@@ -59,6 +67,7 @@ export default {
   background-image: url("@/static/destination/background-destination-desktop.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   padding: 12% 10% 0;
 }
@@ -67,6 +76,7 @@ export default {
   text-transform: uppercase;
   font-family: "barlow";
   letter-spacing: 4px;
+  font-weight: 400;
 }
 
 .page-title h2 b {
@@ -76,7 +86,6 @@ export default {
 
 .page-content {
   display: grid;
-  /* justify-content: space-between; */
   grid-template-columns: 1fr 1fr;
   gap: 10%;
   padding: 2rem 0;
@@ -206,32 +215,35 @@ export default {
     justify-content: space-around;
     width: 100%;
   }
+}
+@media (max-width: 500px) {
+  .main {
+    background-image: url("@/static/destination/background-destination-mobile.jpg");
+  }
+  .page-title {
+    font-size: 0.7rem;
+    align-self: center;
+  }
 
-  @media (max-width: 500px) {
-    .page-title {
-      font-size: 0.7rem;
-      align-self: center;
-    }
+  .item-img {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
-    .item-img {
-      width: 80%;
-      justify-content: center;
-      margin: 0 auto;
-    }
+  .item-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .item-distance {
+    margin: 0 0 2rem 0;
+  }
 
-    .item-info {
-      flex-direction: column;
-      align-items: center;
-    }
-    .item-distance {
-      margin: 0 0 2rem 0;
-    }
-
-    .item-distance, .item-travel {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .item-distance,
+  .item-travel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
